@@ -1,0 +1,331 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+#mainBlock {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.content-area {
+  display: flex;
+  flex: 1;
+}
+
+#task {
+  text-align: left;
+  color: #0f0e0e;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+#levelSelect {
+  /* margin-top: 5px; */
+  height: 50px;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.block {
+  border-radius: 10px;
+  border: 1px solid #007bff;
+  padding: 20px;
+  margin: 5px;
+}
+
+.half {
+  width: 50%;
+  height: 100%;
+}
+
+.divider {
+  height: 1px;
+  background-color: #007bff;
+  width: 100%;
+}
+
+.result-placeholder {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.block.half {
+  height: 100%;
+}
+
+.part.w-100 {
+  overflow: auto;
+}
+
+.part.w-100:first-child {
+  height: 5%;
+}
+
+.part.w-100:last-child {
+  margin-top: 0.5em;
+  height: 70%;
+}
+
+.btn-custom {
+  border-radius: 5px;
+  border: 1px solid green;
+  color: green;
+  background-color: transparent;
+  padding: 5px 12px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  color: white;
+  background-color: green;
+}
+
+.btn-custom::before {
+  content: "▶";
+  color: inherit;
+  margin-right: 5px;
+}
+
+.result {
+  margin-top: 2em;
+  width: 98%;
+  flex-basis: 50px;
+}
+
+#questionsNav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#prevQuestionBtn,
+#nextQuestionBtn {
+  justify-content: space-between;
+  font-size: 15px;
+  width: 11em;
+  min-height: 1.5em;
+  padding: 5px 12px;
+  border-radius: 5px;
+  border: 1px solid #1576dd;
+  background-color: #f6f7f8;
+  color: #1576dd;
+  /* border: none; */
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 2em;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#prevQuestionBtn::before {
+  content: "«"; /* Double chevron for Previous */
+}
+
+#nextQuestionBtn::after {
+  content: " »"; /* Double chevron for Previous */
+}
+
+#prevQuestionBtn:hover,
+#nextQuestionBtn:hover,
+.doc-button:hover {
+  transform: scale(1.05);
+  background-color: #007bff; /* Blue background on hover */
+  color: #fff;
+}
+
+#instructionWrapper {
+  display: flex;
+  justify-content: start;
+  height: 350px;
+  width: 100%;
+  text-align: left;
+}
+
+#instructionWrapper {
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  width: 100%; 
+  text-align: center;
+  background-color: #f9f9f9; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.textarea-sql {
+  margin-top: 1em;
+  background-color: #f0e3e3; 
+  color: #232121; 
+  border: 1px solid #e8dfdf; 
+  border-radius: 4px; 
+  padding: 10px; 
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 14px; /* Розмір шрифту */
+  line-height: 1.5; /* Міжрядковий інтервал */
+  width: 100%; /* Ширина поля */
+  box-sizing: border-box; /* Розрахунок ширини включає padding і border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  resize: vertical; /* Дозволяє змінювати лише вертикальний розмір */
+}
+
+.textarea-sql:focus {
+  outline: none; /* Видалення фокусної рамки */
+  border-color: #007acc; /* Зміна кольору рамки при фокусі */
+}
+
+#showSolutionBtn{
+  font-size: 15px;
+  width: 15em;
+  height: 35px;
+  border-radius: 5px;
+  color: #030302;
+  border: 1px solid #f93eca;
+  cursor: pointer;
+}
+.is-correct {
+  border: 2px solid green;
+}
+
+.is-incorrect {
+  border: 2px solid red;
+}
+
+.doc-button {
+  margin-bottom: 10px;
+  font-size: 14px;
+  width: 15em;
+  height: 35px;
+  border-radius: 5px;
+  color: #1576dd;
+  border: 1px solid #1576dd;
+  cursor: pointer;
+}
+
+#rulesDesc {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+#rulesDesc h2 {
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  color: #333; /* Dark color for contrast */
+  margin-bottom: 15px; /* Space below the heading */
+  font-size: 1.3em; /* Larger font size for heading */
+  font-weight: 600; /* Medium weight for the heading font */
+}
+
+#rulesDesc p {
+  /* display: flex; */
+
+  text-align: left;
+  color: #0f0e0e;
+  line-height: 1.6;
+  font-size: 1.1em;
+  /* margin-bottom: 10px;  */
+}
+
+.rules {
+  /* display: flex; */
+  justify-content: space-evenly; /* Горизонтальне центрування */
+  position: relative;
+  align-items: flex-start; /* Вертикальне центрування */
+  height: 360px; /* Фіксована висота для забезпечення стабільності під час зміни завдань */
+  width: 100%; /* Повна ширина для кращого центрування */
+  text-align: center; /* Центрування тексту в параграфі */
+  margin: 25px auto;
+  padding: 15px 15px 0 15px;
+  border: 1px solid #ccc; /* Тонка межа для виділення */
+  border-radius: 4px; /* Закруглені кути */
+  width: 100%; /* Ширина параграфа */
+  text-align: center; /* Текст центрований */
+  background-color: #f9f9f9; /* Світлий фон для кращої видимості */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легка тінь для глибини */
+}
+
+.LinkButtonDiv {
+  position: absolute;
+  bottom: 4%;
+  margin-left: 0 auto;
+  right: 28%;
+}
+.LinkButtonDiv2{
+  width: 150px;
+  position: absolute;
+  bottom: 5%;
+  margin-left: 0 auto;
+  right: 28%;
+}
+.currentLevelInfo{
+    padding-top: -10px;
+  justify-content: space-evenly; 
+  position: relative;
+  align-items: flex-start; 
+  height: 430px; 
+  width: 100%; margin-top: 40px;
+  text-align: center; 
+  margin: 39px auto;
+  padding: 15px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  width: 100%; 
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: -10px;
+}
+
+/* .headerProgress{
+  margin-top: 1em;
+  margin-bottom: 0.1em;
+} */
+.currentLevelProgres,
+.currentAnsver{
+  align-items: flex-start; 
+  height: 260px; 
+  width: 100%; 
+  text-align: center; 
+  margin: 13px auto;
+  padding: 17px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  width: 100%; /* Ширина параграфа */
+  text-align: center; 
+  background-color: #f9f9f9; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.taskStatuses {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+
+.taskBlock {
+  display: inline-flex; 
+  justify-content: space-around;
+  align-items: center;
+  width: 60px; /* Width of each block */
+  height: 60px; /* Height of each block */
+  border-radius: 20%; /* Circle shape */
+  margin-top: 10px;
+  margin-right: 10px; 
+  border: 1px solid #007bff; 
+  cursor: pointer;
+}
+
+.correctTask {
+  background-color: rgb(12, 201, 12); /* Color for correct answer */
+}
+
+.incorrectTask {
+  background-color: rgb(252, 50, 50); /* Color for incorrect answer */
+}
+/* .currentAnsver{
+    height: 170px; 
+} */
